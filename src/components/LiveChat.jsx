@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { addMessage }from "../utils/chatSlice";
 import ChatMessage from './ChatMessage';
 import { generateRandomName, makeRandomMessage } from '../utils/helper';
 
 const LiveChat = () => {
+  const [liveMessage, setLiveMessage] = useState("");
 
   const dispatch = useDispatch();
 
@@ -33,10 +34,24 @@ const LiveChat = () => {
     </div>
     </div>
 
-    <div className='w-full p-2 ml-2 border border-black'>
-      <input className='w-[275px]' type="text" />
+    <form 
+       className='w-full p-2 ml-2 border border-black' 
+       onSubmit={(e) => {
+        e.preventDefault();
+        dispatch(
+          addMessage({
+            name:"SR",
+            message:liveMessage,
+          })
+        );
+        setLiveMessage("");
+       }}
+    >
+      <input className='px-2 w-[275px]' type="text" value={liveMessage} onChange={(e) => {
+        setLiveMessage(e.target.value);
+      }} />
       <button className='px-2 mx-2 bg-green-100'>Send</button>
-    </div>
+    </form>
    
     </>
   );
