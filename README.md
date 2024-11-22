@@ -1,6 +1,6 @@
-# YouTube Clone
+# TubeCore
 
-YouTube Clone is a web application that replicates the core functionalities of YouTube, including video search, live chat, nested comments etc.
+TubeCore  is a web application that replicates the core functionalities of YouTube, including video search, live chat, nested comments etc.
 
 ## Features
 
