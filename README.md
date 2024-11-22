@@ -36,8 +36,7 @@ You need to obtain a Google API key to interact with the YouTube API.
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/youtube-clone.git
-   cd youtube-clone
+   git clone https://github.com/sreenadh34/TubeCore.git
 
 2. **Install dependencies:**
 
